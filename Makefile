@@ -23,7 +23,7 @@ CFLAGS = -Wall -Wextra -Werror
 # Archiver command to create the static library (.a file)
 AR = ar rcs
 
-all = $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 		$(AR) $(NAME) $(OBJS)
@@ -42,5 +42,3 @@ fclean: clean
 
 # Rule to rebuild the program
 re: clean fclean all re
-
-.PHONY: clean fclean all re
